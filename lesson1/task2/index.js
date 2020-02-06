@@ -1,6 +1,6 @@
 const rootElement = document.querySelector('#root');
 
-const container = React.createElement(
+const element = React.createElement(
     'div',
     { className: 'greeting' },
     React.createElement(
@@ -15,4 +15,4 @@ const container = React.createElement(
     ),
 );
 
-ReactDOM.render(container, rootElement);
+ReactDOM.render(element, rootElement);
