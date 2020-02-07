@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Greeting from './Greeting';
-import './index.css';
 
-const greeting = document.querySelector('.greeting');
+const root = document.querySelector('.root');
 
 ReactDOM.render(
     <Greeting
@@ -11,5 +10,5 @@ ReactDOM.render(
         lastName="Doe"
         age='17'
     />,
-    greeting
+    root
 );
