@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.scss';
 
-const age = date => {
+function age(date) {
     return new Date().getFullYear() - new Date(date).getFullYear();
 }
 
