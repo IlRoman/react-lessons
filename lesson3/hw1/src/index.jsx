@@ -8,7 +8,7 @@ ReactDOM.render(
     <Greeting
         firstName='John'
         lastName="Doe"
-        age='17'
+        birthDate="1991-01-05T22:25:25.550Z"
     />,
     root
 );
