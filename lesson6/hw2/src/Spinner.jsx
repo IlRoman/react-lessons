@@ -3,7 +3,7 @@ import React from 'react';
 const Spinner = size => {
     return (
         <span
-            class="spinner"
+            className="spinner"
             style={{ width: size, height: size }}
         >
         </span>

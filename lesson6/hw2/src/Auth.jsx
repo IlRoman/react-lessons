@@ -8,27 +8,40 @@ class Auth extends React.Component {
         super(props);
         this.state = {
             isLogged: false,
+            actionsAfterSpinner: false,
         }
     }
 
-    onLogin() {
+    onLogin = () => {
         this.setState({
             isLogged: true,
         })
     }
 
-    onLogout() {
+    onLogout = () => {
         this.setState({
             isLogged: false,
+            actionsAfterSpinner: false,
         })
     }
 
     render() {
-        return (
-            this.state.isLogged == false
-                ? <Login onClick={() => this.onLogin()} />
-                : <Logout onClick={() => this.onLogout()} />
-        )
+        if (this.state.isLogged == false) {
+            return <Login onLogin={this.onLogin} />
+        }
+
+        if (this.state.actionsAfterSpinner == true) {
+            return <Logout onLogout={this.onLogout} />
+        }
+
+        if (this.state.isLogged == true) {
+            setTimeout(() => {
+                this.setState({
+                    actionsAfterSpinner: true,
+                })
+            }, 2000)
+            return <Spinner />
+        }
     }
 }
 
