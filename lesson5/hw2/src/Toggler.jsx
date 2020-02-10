@@ -14,12 +14,6 @@ class Toggler extends Component {
         })
     }
 
-    noColor() {
-        this.setState({
-            text: 'no color'
-        })
-    }
-
     render() {
         return (
             <>
@@ -30,17 +24,23 @@ class Toggler extends Component {
                     <button
                         className="picker__button picker__button_coral"
                         onMouseOver={() => this.showColor('coral')}
-                        onMouseOut={() => this.noColor()}
+                        onMouseOut={() => this.setState({
+                            text: 'no color'
+                        })}
                     />
                     <button
                         className="picker__button picker__button_aqua"
                         onMouseOver={() => this.showColor('aqua')}
-                        onMouseOut={() => this.noColor()}
+                        onMouseOut={() => this.setState({
+                            text: 'no color'
+                        })}
                     />
                     <button
                         className="picker__button picker__button_bisque"
                         onMouseOver={() => this.showColor('bisque')}
-                        onMouseOut={() => this.noColor()}
+                        onMouseOut={() => this.setState({
+                            text: 'no color'
+                        })}
                     />
                 </div>
             </>
