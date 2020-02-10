@@ -2,7 +2,9 @@ import React from 'react';
 import './index.scss';
 
 function age(date) {
-    return new Date().getFullYear() - new Date(date).getFullYear();
+    let result = new Date() - new Date(date);
+    return Math.round(result / 1000 / 60 / 60 / 24 / 365.25)
+
 }
 
 const Greeting = props => {
