@@ -8,7 +8,7 @@ const Transaction = props => {
             <span className="transaction__time">{moment(props.time).format('HH:mm')}</span>
             <span className="transaction__assets">{`${props.from} → ${props.to}`}</span>
             <span className="transaction__rate">{props.rate}</span>
-            <span className="transaction__amount">{props.amount}</span>
+            <span className="transaction__amount">{new Intl.NumberFormat('en-GB').format(props.amount)}</span>
         </li>
     );
 };
