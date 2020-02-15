@@ -23,10 +23,10 @@ class UsersList extends React.Component {
     }
 
     render() {
-        const listOfUsers = this.props.user
+        const listOfUsers = this.props.users
             .slice(this.state.currentPage * 3, this.state.currentPage * 3 + 3)
             .sort((a, b) => a.age - b.age)
-            .map(user => <User key={user.id} {...user} />)
+            .map(users => <User key={users.id} {...users} />)
 
         return (
             <div>
@@ -34,7 +34,7 @@ class UsersList extends React.Component {
                     goPrev={this.goPrev}
                     goNext={this.goNext}
                     currentPage={this.state.currentPage}
-                    totalItems={this.props.user.length}
+                    totalItems={this.props.users.length}
                 />
                 <ul className="users">
                     {listOfUsers}
