@@ -29,10 +29,10 @@ class UsersList extends React.Component {
                     goPrev={this.goPrev}
                     goNext={this.goNext}
                     currentPage={this.state.currentPage}
-                    totalItems={this.props.listOfUsers.length}
+                    totalItems={this.props.user.length}
                 />
                 <ul className="users">
-                    {this.props.listOfUsers
+                    {this.props.user
                         .slice(this.state.currentPage * 3, this.state.currentPage * 3 + 3)
                         .sort((a, b) => a.age - b.age)
                         .map(user => <User key={user.id} {...user} />)}
