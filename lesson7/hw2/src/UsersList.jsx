@@ -23,6 +23,11 @@ class UsersList extends React.Component {
     }
 
     render() {
+        const listOfUsers = this.props.user
+            .slice(this.state.currentPage * 3, this.state.currentPage * 3 + 3)
+            .sort((a, b) => a.age - b.age)
+            .map(user => <User key={user.id} {...user} />)
+
         return (
             <div>
                 <Pagination
@@ -32,10 +37,7 @@ class UsersList extends React.Component {
                     totalItems={this.props.user.length}
                 />
                 <ul className="users">
-                    {this.props.user
-                        .slice(this.state.currentPage * 3, this.state.currentPage * 3 + 3)
-                        .sort((a, b) => a.age - b.age)
-                        .map(user => <User key={user.id} {...user} />)}
+                    {listOfUsers}
                 </ul>
             </ div>
         )
