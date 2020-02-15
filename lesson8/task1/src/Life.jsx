@@ -7,11 +7,11 @@ class Life extends React.Component {
     }
 
     componentDidMount() {
-        console.log('componentDidMount: API calls, subscription');
+        console.log('componentDidMount: API calls, subscriptions');
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        console.log('shoudlCompoentUpdate(nextProps, nextState): decide to render or not to render');
+        console.log('shoudlComponentUpdate(nextProps, nextState): decide to render or not to render');
         return true;
     }
 
