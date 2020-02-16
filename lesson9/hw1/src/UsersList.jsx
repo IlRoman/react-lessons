@@ -26,6 +26,7 @@ class UserList extends React.Component {
                 <Filter
                     count={this.state.userList.length}
                     onChange={this.onChange}
+                    filterText={this.state.name}
                 />
                 <ul className="users">
                     {this.state.userList.map(({ name, age, id }) => <User key={id} name={name} age={age} />)}
