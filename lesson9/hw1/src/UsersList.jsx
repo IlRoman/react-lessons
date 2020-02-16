@@ -11,7 +11,7 @@ class UserList extends React.Component {
         }
     }
 
-    handleChange = event => {
+    onChange = event => {
         let arr = this.props.users.filter(x => x.name.toLowerCase().includes(event.target.value.toLowerCase()));
 
         this.setState({
@@ -25,7 +25,7 @@ class UserList extends React.Component {
             <div>
                 <Filter
                     count={this.state.userList.length}
-                    handleChange={this.handleChange}
+                    onChange={this.onChange}
                 />
                 <ul className="users">
                     {this.state.userList.map(({ name, age, id }) => <User key={id} name={name} age={age} />)}
