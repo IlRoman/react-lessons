@@ -16,8 +16,8 @@ class UserForm extends React.Component {
         this.props.onSubmit(this.state);
     }
 
-    handleChange = e => {
-        const { name, value, checked, type } = e.target;
+    handleChange = element => {
+        const { name, value, checked, type } = element.target;
 
         const val = type === 'checkbox'
             ? checked
