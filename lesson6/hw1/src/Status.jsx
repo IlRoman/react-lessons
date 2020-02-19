@@ -5,7 +5,7 @@ import Offline from './Offline';
 const Status = isOnline => {
     return (
         <div className="status" >
-            {isOnline == true
+            {isOnline
                 ? <Online />
                 : <Offline />
             }
