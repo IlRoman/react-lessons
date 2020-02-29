@@ -17,8 +17,8 @@ class User extends React.Component {
         this.fetchUserData(this.props.match.url);
     }
 
-    fetchUserData = (userPath) => {
-        fetch(`https://api.github.com${userPath}`)
+    fetchUserData = (path) => {
+        fetch(`https://api.github.com${path}`)
             .then(response => response.json())
             .then(user => this.setState({
                 userName: user.name,
