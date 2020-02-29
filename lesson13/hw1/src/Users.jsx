@@ -2,16 +2,16 @@ import React from 'react';
 import { Link, Switch, Route } from 'react-router-dom';
 import User from './User';
 
-const Users = () => {
+const Users = ({ match }) => {
     return (
         <div className="page__content">
             <h1>Users</h1>
             <ul className="navigation">
                 <li className="navigation__item">
-                    <Link to="/users/github">Github</Link>
+                    <Link to={`${match.url}/github`}>Github</Link>
                 </li>
                 <li className="navigation__item">
-                    <Link to="/users/facebook">Facebook</Link>
+                    <Link to={`${match.url}/facebook`}>Facebook</Link>
                 </li>
             </ul>
             <Switch>
@@ -20,7 +20,7 @@ const Users = () => {
                     <span>Select a user please</span>
                 </Route>
             </Switch>
-        </div>
+        </div >
     );
 };
 
