@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 
-const Clock = ({ location, num }) => {
+const Clock = ({ location, offset }) => {
     const [localTime, setLocalTime] = useState(null);
 
-    const getLocaleTime = num => {
-        const setHours = new Date().setHours(new Date().getHours() + num);
+    const getLocaleTime = offset => {
+        const setHours = new Date().setHours(new Date().getHours() + offset);
         const formatTime = moment(setHours).format('LTS');
         return formatTime;
     };
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            setLocalTime(getLocaleTime(num));
+            setLocalTime(getLocaleTime(offset));
         }, 1000);
 
         return () => clearInterval(intervalId);
