@@ -11,11 +11,11 @@ const Clock = ({ location, offset }) => {
     };
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
+        const Id = setInterval(() => {
             setLocalTime(getLocaleTime(offset));
         }, 1000);
 
-        return () => clearInterval(intervalId);
+        return () => clearInterval(Id);
     })
 
     return (
