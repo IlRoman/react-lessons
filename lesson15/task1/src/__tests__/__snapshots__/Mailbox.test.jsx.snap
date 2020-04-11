@@ -12,18 +12,6 @@ exports[`<Mailbox /> should not render unread messages 1`] = `
 </div>
 `;
 
-exports[`<Mailbox /> should render count of unread messages 1`] = `
-<div
-  className="mailbox"
->
-  <span
-    className="mailbox__text"
-  >
-    Messages
-  </span>
-</div>
-`;
-
 exports[`<Mailbox /> should render count of unread messages: 4 1`] = `
 <div
   className="mailbox"
