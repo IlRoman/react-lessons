@@ -6,7 +6,7 @@ describe('<Message />', () => {
     it('should render text', () => {
         const props = { text: 'Hello world' }
         const wrappedComponent = shallow(<Message {...props} />);
-        expect(wrappedComponent).toMatchSnapshot('Hello world');
+        expect(wrappedComponent).toMatchSnapshot();
     }),
 
         it('should not render text', () => {
